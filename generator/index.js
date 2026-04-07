@@ -1,21 +1,13 @@
 import ical, { ICalCalendarMethod } from 'ical-generator';
 import fs from "node:fs/promises"
+import { readSchedule } from "./utils.js";
 
-const calendar = ical({ name: 'my first iCal' });
-
+const calendar = ical({ name: 'Neuro Schedule' });
 calendar.method(ICalCalendarMethod.REQUEST);
 
-const startTime = new Date();
-const endTime = new Date();
-endTime.setHours(startTime.getHours() + 1);
-calendar.createEvent({
-    start: startTime,
-    end: endTime,
-    summary: 'Example Event',
-    description: 'test',
-    location: 'stream',
-    url: 'http://twitch.tv/vedal987',
-});
+const events = await readSchedule()
+
+events.forEach(event => event.createEvent(calendar))
 
 await fs.writeFile("../schedule.ics", calendar.toString())
 await fs.writeFile("../schedule.json", JSON.stringify(calendar.toJSON(), null, 4))
