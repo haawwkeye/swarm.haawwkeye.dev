@@ -1,0 +1,47 @@
+{
+    "description": null,
+    "events": [
+        {
+            "alarms": [],
+            "allDay": false,
+            "attachments": [],
+            "attendees": [],
+            "busystatus": null,
+            "categories": [],
+            "class": null,
+            "created": null,
+            "description": {
+                "plain": "test"
+            },
+            "end": "2026-04-07T19:02:45.777Z",
+            "floating": false,
+            "id": "1771532d-2760-4f41-87a9-bdce4d3acc84",
+            "lastModified": null,
+            "location": {
+                "title": "stream"
+            },
+            "organizer": null,
+            "priority": null,
+            "recurrenceId": null,
+            "repeating": null,
+            "sequence": 0,
+            "stamp": "2026-04-07T18:02:45.780Z",
+            "start": "2026-04-07T18:02:45.777Z",
+            "status": null,
+            "summary": "Example Event",
+            "timezone": null,
+            "transparency": null,
+            "url": "http://twitch.tv/vedal987",
+            "x": []
+        }
+    ],
+    "method": "REQUEST",
+    "name": "my first iCal",
+    "prodId": "//sebbo.net//ical-generator//EN",
+    "scale": null,
+    "source": null,
+    "timezone": null,
+    "ttl": null,
+    "url": null,
+    "x": []
+}
