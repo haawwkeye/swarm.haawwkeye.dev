@@ -1,6 +1,11 @@
 import fs from "node:fs/promises"
 
-const ExampleSchedule = (await fs.readFile("./example.txt")).toString()
+// TODO: Automate this
+//* Most likely I'll either run a discord bot or just manually do this...
+//* If I do it manually it will only contain the most recent and not keep old stuff....
+//* But that should be fine! The main issue is if it updates I might not update right away....
+//* Thus it is better to run a discord bot... Until it's auto posted somewhere... 
+const Schedule = (await fs.readFile("./schedule.txt")).toString()
 
 class ScheduleEvent {
 	constructor(title, time) {
@@ -8,7 +13,7 @@ class ScheduleEvent {
 		this.time = Number(time)
 	}
 
-	createEvent(calendar) {
+	createEvent(calendar, append = {}) {
 		const ms = this.time * 1000;
 
 		const startTime = new Date(ms)
@@ -28,7 +33,7 @@ class ScheduleEvent {
 			end: endTime.toUTCString(),
 			summary: this.title,
 			url: 'https://twitch.tv/vedal987',
-		});
+		} | append);
 	}
 }
 
@@ -42,7 +47,7 @@ function readScheduleLine(line) {
 export async function readSchedule()
 {
 	const schedule = [];
-	ExampleSchedule.split("\n").forEach(line => {
+	Schedule.split("\n").forEach(line => {
 		if (line.startsWith("<t:")) schedule.push(line)
 	})
 	
