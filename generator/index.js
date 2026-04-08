@@ -1,4 +1,4 @@
-import ical, { ICalCalendarMethod } from 'ical-generator';
+import ical, { ICalCalendarMethod, ICalAlarm, ICalAlarmType } from 'ical-generator';
 import fs from "node:fs/promises"
 import { readSchedule } from "./utils.js";
 
@@ -7,7 +7,19 @@ calendar.method(ICalCalendarMethod.REQUEST);
 
 const events = await readSchedule()
 
-events.forEach(event => event.createEvent(calendar))
+events.forEach(event => {
+	const armEvent = calendar.createEvent(event.getEvent())
+	// 15 mins
+	armEvent.createAlarm({
+		type: ICalAlarmType.audio,
+		trigger: 60 * 15
+	})
+	// 2 mins
+	armEvent.createAlarm({
+		type: ICalAlarmType.audio,
+		trigger: 60 * 2
+	})
+})
 
 await fs.writeFile("../schedule.ics", calendar.toString())
 await fs.writeFile("../schedule.json", JSON.stringify(calendar.toJSON(), null, 4))

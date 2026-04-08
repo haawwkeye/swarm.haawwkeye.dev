@@ -2,7 +2,32 @@
     "description": null,
     "events": [
         {
-            "alarms": [],
+            "alarms": [
+                {
+                    "attach": null,
+                    "attendees": [],
+                    "description": null,
+                    "interval": null,
+                    "relatesTo": null,
+                    "repeat": null,
+                    "summary": null,
+                    "trigger": 900,
+                    "type": "audio",
+                    "x": []
+                },
+                {
+                    "attach": null,
+                    "attendees": [],
+                    "description": null,
+                    "interval": null,
+                    "relatesTo": null,
+                    "repeat": null,
+                    "summary": null,
+                    "trigger": 120,
+                    "type": "audio",
+                    "x": []
+                }
+            ],
             "allDay": false,
             "attachments": [],
             "attendees": [],
@@ -31,7 +56,32 @@
             "x": []
         },
         {
-            "alarms": [],
+            "alarms": [
+                {
+                    "attach": null,
+                    "attendees": [],
+                    "description": null,
+                    "interval": null,
+                    "relatesTo": null,
+                    "repeat": null,
+                    "summary": null,
+                    "trigger": 900,
+                    "type": "audio",
+                    "x": []
+                },
+                {
+                    "attach": null,
+                    "attendees": [],
+                    "description": null,
+                    "interval": null,
+                    "relatesTo": null,
+                    "repeat": null,
+                    "summary": null,
+                    "trigger": 120,
+                    "type": "audio",
+                    "x": []
+                }
+            ],
             "allDay": false,
             "attachments": [],
             "attendees": [],
@@ -60,7 +110,32 @@
             "x": []
         },
         {
-            "alarms": [],
+            "alarms": [
+                {
+                    "attach": null,
+                    "attendees": [],
+                    "description": null,
+                    "interval": null,
+                    "relatesTo": null,
+                    "repeat": null,
+                    "summary": null,
+                    "trigger": 900,
+                    "type": "audio",
+                    "x": []
+                },
+                {
+                    "attach": null,
+                    "attendees": [],
+                    "description": null,
+                    "interval": null,
+                    "relatesTo": null,
+                    "repeat": null,
+                    "summary": null,
+                    "trigger": 120,
+                    "type": "audio",
+                    "x": []
+                }
+            ],
             "allDay": false,
             "attachments": [],
             "attendees": [],
@@ -89,7 +164,32 @@
             "x": []
         },
         {
-            "alarms": [],
+            "alarms": [
+                {
+                    "attach": null,
+                    "attendees": [],
+                    "description": null,
+                    "interval": null,
+                    "relatesTo": null,
+                    "repeat": null,
+                    "summary": null,
+                    "trigger": 900,
+                    "type": "audio",
+                    "x": []
+                },
+                {
+                    "attach": null,
+                    "attendees": [],
+                    "description": null,
+                    "interval": null,
+                    "relatesTo": null,
+                    "repeat": null,
+                    "summary": null,
+                    "trigger": 120,
+                    "type": "audio",
+                    "x": []
+                }
+            ],
             "allDay": false,
             "attachments": [],
             "attendees": [],

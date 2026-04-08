@@ -13,7 +13,7 @@ class ScheduleEvent {
 		this.time = Number(time)
 	}
 
-	createEvent(calendar, append = {}) {
+	getEvent() {
 		const ms = this.time * 1000;
 
 		const startTime = new Date(ms)
@@ -26,14 +26,14 @@ class ScheduleEvent {
 		endTime.setHours(endTime.getHours() + 2);
 		endTime.setMinutes(endTime.getMinutes() + 30);
 
-		calendar.createEvent({
+		return {
 			id: ms,
 			stamp: startTime.toUTCString(),
 			start: startTime.toUTCString(),
 			end: endTime.toUTCString(),
 			summary: this.title,
 			url: 'https://twitch.tv/vedal987',
-		} | append);
+		}
 	}
 }
 
