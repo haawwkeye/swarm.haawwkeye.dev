@@ -15,8 +15,9 @@ class ScheduleEvent {
 		endTime.setMinutes(startTime.getMinutes() + 30);
 
 		calendar.createEvent({
-			start: startTime,
-			end: endTime,
+			stamp: startTime.toUTCString(),
+			start: startTime.toUTCString(),
+			end: endTime.toUTCString(),
 			summary: this.title,
 			url: 'https://twitch.tv/vedal987',
 		});

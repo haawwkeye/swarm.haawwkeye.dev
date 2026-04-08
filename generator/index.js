@@ -7,6 +7,10 @@ calendar.method(ICalCalendarMethod.REQUEST);
 
 const events = await readSchedule()
 
+calendar.createEvent({
+	stamp
+})
+
 events.forEach(event => event.createEvent(calendar))
 
 await fs.writeFile("../schedule.ics", calendar.toString())
