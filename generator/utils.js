@@ -9,12 +9,20 @@ class ScheduleEvent {
 	}
 
 	createEvent(calendar) {
-		const startTime = new Date(this.time * 1000)
-		const endTime = new Date()
-		endTime.setHours(startTime.getHours() + 2);
-		endTime.setMinutes(startTime.getMinutes() + 30);
+		const ms = this.time * 1000;
+
+		const startTime = new Date(ms)
+		const endTime = new Date(ms)
+
+		// TODO: Stream Length Detection
+		//* Chill streams and Karaoke streams are about 2-3 hours
+		//* Collab streams are about 3-4+ hours long sometimes more sometimes less
+		//* So in theory I can just detect via the title or something idk
+		endTime.setHours(endTime.getHours() + 2);
+		endTime.setMinutes(endTime.getMinutes() + 30);
 
 		calendar.createEvent({
+			id: ms,
 			stamp: startTime.toUTCString(),
 			start: startTime.toUTCString(),
 			end: endTime.toUTCString(),
