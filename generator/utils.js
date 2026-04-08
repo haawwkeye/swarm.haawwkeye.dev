@@ -14,24 +14,42 @@ class ScheduleEvent {
 	}
 
 	getEvent() {
+		const title = this.title;
+		const lowerTitle = title.toLowerCase()
+
 		const ms = this.time * 1000;
 
-		const startTime = new Date(ms)
-		const endTime = new Date(ms)
+		const startTime = new Date(ms);
+		const endTime = new Date(ms);
+
+		let hours = 2;
+		let mins = 30;
+
+		// You never know, I just map out 4 hours
+		// since that's about how long Hollow Knight streams were...
+		// It's been too long since Dev Stream so I have no idea! I assume about the same...
+		// After looking into it, Dev Streams are around 3-4+ hours...
+		if (lowerTitle.includes("vedal") || lowerTitle.includes("dev")) {
+			hours = 4;
+			mins = 0;
+		}
 
 		// TODO: Stream Length Detection
 		//* Chill streams and Karaoke streams are about 2-3 hours
-		//* Collab streams are about 3-4+ hours long sometimes more sometimes less
+		//* Collab/Dev streams are about 2-4+ hours long sometimes more sometimes less
 		//* So in theory I can just detect via the title or something idk
-		endTime.setHours(endTime.getHours() + 2);
-		endTime.setMinutes(endTime.getMinutes() + 30);
+		
+		endTime.setHours(endTime.getHours() + hours);
+		endTime.setMinutes(endTime.getMinutes() + mins);
+
+		
 
 		return {
 			id: ms,
 			stamp: startTime.toUTCString(),
 			start: startTime.toUTCString(),
 			end: endTime.toUTCString(),
-			summary: this.title,
+			summary: title,
 			url: 'https://twitch.tv/vedal987',
 		}
 	}
