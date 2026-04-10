@@ -1,3 +1,7 @@
-# Test
+# Neuro Schedule
 
-I forgor how github pages work...
+[Schedule Generator](./generator)
+
+[Schedule.ics](./schedule.ics)
+
+[Schedule.json](./schedule.json)
