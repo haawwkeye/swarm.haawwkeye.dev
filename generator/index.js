@@ -7,6 +7,8 @@ calendar.method(ICalCalendarMethod.REQUEST);
 
 const events = await readSchedule()
 
+// TODO: Look into this, as it doesn't work at all for some reason???
+//* Could just be from not doing it correctly on iphone???
 events.forEach(event => {
 	const armEvent = calendar.createEvent(event.getEvent())
 	// 15 mins
