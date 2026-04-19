@@ -3,8 +3,8 @@
 <t:1776362400:F> - <t:1776362400:R> - Evil Stream <a:evilBoogie:1151239267343929354>
 <t:1776448800:D> - Offline <:neuroSleep:1065450325881929770>
 <t:1776535200:D> - Offline <:neuroSleep:1065450325881929770>
-<t:1776621600:F> - <t:1776621600:R> - Evil & Vedal VR Hangout <a:evilWYSI:1232413936075280466> <:Tutel:1136480360495063121>
-<t:1776708000:D> - Offline <:neuroSleep:1065450325881929770>
+<t:1776621600:F> - Offline <:neuroSleep:1065450325881929770>
+<t:1776708000:D> - <t:1776708000:R> - Evil & Vedal VR Hangout <a:evilWYSI:1232413936075280466> <:Tutel:1136480360495063121>
 
 -# Fanart of the week by [@Anzeal14](<https://x.com/Anzeal14/status/2043677854815170894>); [#art post](<https://discord.com/channels/574720535888396288/1493237038193840269>)
 
