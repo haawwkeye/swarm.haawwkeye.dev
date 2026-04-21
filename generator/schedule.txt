@@ -1,11 +1,11 @@
-<t:1776189600:F> - <t:1776189600:R> - Neuro Stream <:NeurOhISee:1136209034966483084>
-<t:1776276000:F> - <t:1776276000:R> - Evil Karaoke <a:evilSing:1132025131607265280>
-<t:1776362400:F> - <t:1776362400:R> - Evil Stream <a:evilBoogie:1151239267343929354>
-<t:1776448800:D> - Offline <:neuroSleep:1065450325881929770>
-<t:1776535200:D> - Offline <:neuroSleep:1065450325881929770>
-<t:1776621600:F> - Offline <:neuroSleep:1065450325881929770>
-<t:1776708000:D> - <t:1776708000:R> - Evil & Vedal VR Hangout <a:evilWYSI:1232413936075280466> <:Tutel:1136480360495063121>
+<t:1776794400:F> - <t:1776794400:R> - Neuro Stream <a:neuroBlankies:1134906690907668590>
+<t:1776880800:D> - Offline <:neuroSleep:1065450325881929770>
+<t:1776967200:F> - <t:1776967200:R> - Evil Stream <a:evilEggs:1444744744017072199>
+<t:1777057200:F> - <t:1777057200:R> - Easy Bake Cooking w/ Numi & Evil <:evilSmug:1117350149853806592>
+<t:1777140000:D> - Offline <:neuroSleep:1065450325881929770>
+<t:1777226400:D> - Offline <:neuroSleep:1065450325881929770>
+<t:1777312800:F> - <t:1777312800:R> - Dev Stream <:Tutel:1136480360495063121>
 
--# Fanart of the week by [@Anzeal14](<https://x.com/Anzeal14/status/2043677854815170894>); [#art post](<https://discord.com/channels/574720535888396288/1493237038193840269>)
+-# Fanart of the week by <@1368542082507079751>; [#art post](<https://discord.com/channels/574720535888396288/1495033360383348786>)
 
 <@&1179189501650817174> <:neuroPing:1139543681263743076>
