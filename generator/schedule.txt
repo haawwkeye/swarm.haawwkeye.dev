@@ -1,13 +1,11 @@
-<t:1781632800:F> - <t:1781632800:R> - Neuro Stream <:neuroAYAYA:1067437988671410256>
-<t:1781719200:F> - <t:1781719200:R> - Cyberpunk 2077: Phantom Liberty w/ Neuro & Vedal <:Tutel:1136480360495063121>
-<t:1781805600:F> - <t:1781805600:R> - Evil Stream <:evilSmug:1117350149853806592>
-<t:1781892000:D> - Offline <:neuroSleep:1065450325881929770>
-<t:1781978400:F> - <t:1781978400:R> - Neuro Plays Skyrim <:neuroHappi:1087537801391771678>
-<t:1782054000:F> - <t:1782054000:R> - [Chinese Parents](<https://store.steampowered.com/app/736190/Chinese_Parents/>) w/ [Asakura Yukai](<https://space.bilibili.com/605942>) & Neuro <:NeurOhISee:1136209034966483084> **<-- Different from normal stream time!!**
-<t:1782151200:D> - Offline <:neuroSleep:1065450325881929770>
+<t:1782237600:F> - <t:1782237600:R> - Neuro Stream <:neuroNyan:1066255956155048027> 
+<t:1782324000:F> - <t:1782324000:R> - Neuro Karaoke <a:neuroKuru:1154848883957043211>
+<t:1782410400:F> - <t:1782410400:R> - Evil Stream <a:evilSoCute:1128804811270267010>
+<t:1782496800:D> - Offline <:neuroSleep:1065450325881929770>
+<t:1782583200:F> - <t:1782583200:R> - Neuro Plays Skyrim <a:neuroPat:1061180997581934693>
+<t:1782669600:F> - <t:1782669600:R> - The Neuro & Evil Podcast <a:neuroYay:1069989552669868074> <a:evilYay:1128814376506364017>
+<t:1782756000:D> - Offline <:neuroSleep:1065450325881929770>
 
--# Asakura Yukai can be found on YouTube [here](<https://www.youtube.com/@AsakuraYukai/videos>) and Twitter [here](<https://x.com/AsakuraYukai>).
-
--# Fanart of the week by <@1047852617868521553>; [#art post](<https://discord.com/channels/574720535888396288/1515773871104720906>)
+-# Fanart of the week by [@soulgluttony](<https://x.com/soulgluttony/status/2067680346695455202>); [#art post](<https://discord.com/channels/574720535888396288/1517240319211470848>)
 
 <@&1179189501650817174> <:neuroPing:1139543681263743076>
