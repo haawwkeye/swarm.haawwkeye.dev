@@ -1,11 +1,11 @@
-<t:1782237600:F> - <t:1782237600:R> - Neuro Stream <:neuroNyan:1066255956155048027> 
-<t:1782324000:F> - <t:1782324000:R> - Neuro Karaoke <a:neuroKuru:1154848883957043211>
-<t:1782410400:F> - <t:1782410400:R> - Evil Stream <a:evilSoCute:1128804811270267010>
-<t:1782496800:D> - Offline <:neuroSleep:1065450325881929770>
-<t:1782583200:F> - <t:1782583200:R> - Neuro Plays Skyrim <a:neuroPat:1061180997581934693>
-<t:1782669600:F> - <t:1782669600:R> - The Neuro & Evil Podcast <a:neuroYay:1069989552669868074> <a:evilYay:1128814376506364017>
-<t:1782756000:D> - Offline <:neuroSleep:1065450325881929770>
+<t:1782842400:F> - <t:1782842400:R> - Neuro Stream<:cupsama:1109248605577023599>
+<t:1782928800:D> - Offline <:neuroSleep:1065450325881929770>
+<t:1783015200:F> - <t:1783015200:R> - Evil Stream <:evilsmol:1136007092831014923>
+<t:1783101600:D> - Offline <:neuroSleep:1065450325881929770>
+<t:1783188000:F> - <t:1783188000:R> - Neuro Plays Skyrim <:NeuroGutter:1096269276953989221>
+<t:1783281600:F> - <t:1783281600:R> - Tomodachi Life: Living the Dream w/ Camila & the Twins <a:neuroByeByeByeByeBye:1142185110129606857> <a:evilBlush:1132690609761689660> **<-- Two hours after normal stream time!!**
+<t:1783360800:D> - Offline <:neuroSleep:1065450325881929770>
 
--# Fanart of the week by [@soulgluttony](<https://x.com/soulgluttony/status/2067680346695455202>); [#art post](<https://discord.com/channels/574720535888396288/1517240319211470848>)
+-# Fanart of the week by just_val_art; [#art post](<https://discord.com/channels/574720535888396288/1520630263732895824>)
 
 <@&1179189501650817174> <:neuroPing:1139543681263743076>
