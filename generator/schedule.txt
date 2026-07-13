@@ -1,11 +1,11 @@
-<t:1783447200:F> - <t:1783447200:R> - Neuro Stream <:NeurOhISee:1136209034966483084>
-<t:1783533600:F> - <t:1783533600:R> - Evil Karaoke <a:evilSing:1132025131607265280>
-<t:1783620000:F> - <t:1783620000:R> - Evil Stream <:evilOH:1168965963144765462>
-<t:1783706400:D> - Offline <:neuroSleep:1065450325881929770>
-<t:1783792800:F> - <t:1783792800:R> - Neuro Plays Skyrim <:neuroAware:1125108880062566521>
-<t:1783879200:D> - Offline <:neuroSleep:1065450325881929770>
-<t:1783965600:F> - <t:1783965600:R> - Dev Stream <:Tutel:1136480360495063121>
+<t:1784052000:F> - <t:1784052000:R> - Neuro Stream <:NeurOhISee:1136209034966483084>
+<t:1784138400:D> - Offline <:neuroSleep:1065450325881929770>
+<t:1784224800:F> - <t:1784224800:R> - Evil Stream <:evilOH:1168965963144765462>
+<t:1784311200:F> - <t:1784311200:R> - Agreeee w/ Mini & Evil <:evilOH:1168965963144765462>
+<t:1784397600:F> - <t:1784397600:R> - Neuro Plays Skyrim  <:NeurOhISee:1136209034966483084>
+<t:1784484000:F> - <t:1784484000:R> - Slay the Spire II w/ Evil & Vedal <:Tutel:1136480360495063121> <:evilOH:1168965963144765462>
+<t:1784570400:D> - Offline <:neuroSleep:1065450325881929770>
 
--# Fanart of the week by [@AiizenClyde](<https://x.com/AiizenClyde/status/2074086475755590046>); [#art post](<https://discord.com/channels/574720535888396288/1523644109481312346>)
+-# Fanart of the week by <@930956192136699954>; [#art post](<https://discord.com/channels/574720535888396288/1521730236226469949>)
 
 <@&1179189501650817174> <:neuroPing:1139543681263743076>
