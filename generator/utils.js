@@ -55,11 +55,39 @@ class ScheduleEvent {
 	}
 }
 
+function tryGetDay(info) {
+	let time;
+
+	try
+	{
+		time = (info[0].split(":")[1]).trim()
+	} catch {
+		console.error("Failed to get Day")
+	}
+
+	return time
+}
+
+function tryGetTime(info) {
+	let time;
+
+	try
+	{
+		time = (info[1].split(":")[1]).trim()
+	} catch {
+		time = tryGetDay(info)
+	}
+
+	return time
+}
+
 function readScheduleLine(line) {
 	const info = line.split(" - ");
 	if (info[1].startsWith("Offline")) return false
-	//console.log(event.title, event.time)
-	return new ScheduleEvent((info[2].split("<")[0]).trim(), (info[1].split(":")[1]).trim())
+	const title = (info[2].split("<")[0]).trim();
+	const time = tryGetTime(info);
+	console.log(info)
+	return new ScheduleEvent(title, time)
 }
 
 export async function readSchedule()
@@ -70,10 +98,12 @@ export async function readSchedule()
 	})
 	
 	const events = [];
+	let lastDay = tryGetDay(schedule.at(-1).split(" - "));
 	for (let i = 0; i < schedule.length; i++) {
 		const info = schedule[i];
 		let event = readScheduleLine(info);
 		if (event) events.push(event)
 	}
-	return events;
+
+	return { events: events, lastDay: lastDay }
 }
