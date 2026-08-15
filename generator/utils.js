@@ -86,7 +86,6 @@ function readScheduleLine(line) {
 	if (info[1].startsWith("Offline")) return false
 	const title = (info[2].split("<")[0]).trim();
 	const time = tryGetTime(info);
-	console.log(info)
 	return new ScheduleEvent(title, time)
 }
 
