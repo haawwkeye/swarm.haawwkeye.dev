@@ -32,6 +32,15 @@ class ScheduleEvent {
 		if (lowerTitle.includes("vedal") || lowerTitle.includes("dev")) {
 			hours = 4;
 			mins = 0;
+		} else if (lowerTitle.includes("skyrim")) // I forgor just based off of twitch
+		{
+			hours = 3;
+			mins = 0;
+		} else if (lowerTitle.includes("osu")) {
+			// osu is unknown but based on the Evil Stream on Monday it's ending around 3:47 so probably 3:45?
+			// Or it was a one time thing and should be like the above skyrim
+			hours = 3;
+			mins = 45;
 		}
 
 		// TODO: Stream Length Detection
