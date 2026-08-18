@@ -1,1 +1,3 @@
-<relative-time datetime="2014-04-01T16:30:00-08:00" format="duration"> April 1, 2014 4:30pm </relative-time>
+<relative-time datetime="1970-01-01T00:00:00.000Z" format="relative">
+      Oops! This browser doesn't support Web Components.
+</relative-time>
