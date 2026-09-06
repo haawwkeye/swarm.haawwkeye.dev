@@ -1,11 +1,13 @@
-<t:1788285600:F> - <t:1788285600:R> - Neuro Stream <:neuroSmug:1057358067727085669>
-<t:1788372000:F> - <t:1788372000:R> - Evil Karaoke <a:evilSing:1132025131607265280>
-<t:1788458400:F> - <t:1788458400:R> - Evil Stream <a:evilYay:1128814376506364017>
-<t:1788544800:D> - Offline <:neuroSleep:1065450325881929770>
-<t:1788631200:F> - <t:1788631200:R> - Neuro Plays Skyrim <a:neurobonk:1103700936129511474> ☠️
-<t:1788717600:D> - Offline <:neuroSleep:1065450325881929770>
-<t:1788811200:F> - <t:1788811200:R> - Camila & Evil VR <a:GIGAEVIL:1131304626151506040>
+<t:1788890400:F> - <t:1788890400:R> - Neuro Stream <:NeurOhISee:1136209034966483084>
+<t:1788967800:F> - <t:1788967800:R> - (on [secretneuroaccount](<https://twitch.tv/secretneuroaccount>); Twitch only) Neuro's *Vivy: Fluorite Eye's Song* Ep. 1-4 Watchalong
+<t:1789059600:F> - <t:1789059600:R> - Charity D&D Stream
+<t:1789149600:F> - <t:1789149600:R> - Evil Stream <:evilOH:1168965963144765462>
+<t:1789236000:F> - <t:1789236000:R> - Neuro Plays Skyrim <:neuroHappi:1087537801391771678>
+<t:1789322400:F> - <t:1789322400:R> - Hollow Knight: Silksong w/ Vedal & Evil
+<t:1789408800:D> - Offline <:neuroSleep:1065450325881929770>
 
--# Fanart of the week by [@tanhuluu](<https://x.com/tanhuluu/status/2094337232908022164>); [#art post](<https://discord.com/channels/574720535888396288/1543895518097309696>)
+Please note the different start times for the watchalong and charity D&D stream.
+
+-# Fanart of the week by <@282314271210209280>; [#art post](<https://discord.com/channels/574720535888396288/1545158335144136794>)
 
 <@&1179189501650817174> <:neuroPing:1139543681263743076>
