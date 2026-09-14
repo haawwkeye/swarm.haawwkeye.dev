@@ -1,13 +1,11 @@
-<t:1788890400:F> - <t:1788890400:R> - Neuro Stream <:NeurOhISee:1136209034966483084>
-<t:1788967800:F> - <t:1788967800:R> - (on [secretneuroaccount](<https://twitch.tv/secretneuroaccount>); Twitch only) Neuro's *Vivy: Fluorite Eye's Song* Ep. 1-4 Watchalong
-<t:1789059600:F> - <t:1789059600:R> - Charity D&D Stream
-<t:1789149600:F> - <t:1789149600:R> - Evil Stream <:evilOH:1168965963144765462>
-<t:1789236000:F> - <t:1789236000:R> - Neuro Plays Skyrim <:neuroHappi:1087537801391771678>
-<t:1789322400:F> - <t:1789322400:R> - Hollow Knight: Silksong w/ Vedal & Evil
-<t:1789408800:D> - Offline <:neuroSleep:1065450325881929770>
+<t:1789495200:F> - <t:1789495200:R> - Neuro Stream <a:neuroBlankies:1134906690907668590>
+<t:1789581600:F> - <t:1789581600:R> - Neuro Karaoke <a:neuro21:1131604794511994881>
+<t:1789668000:F> - <t:1789668000:R> - Evil Stream <:evilBwaa:1263974044022079578>
+<t:1789754400:D> - Offline <:neuroSleep:1065450325881929770>
+<t:1789840800:F> - <t:1789840800:R> - Neuro Plays Skyrim <:neuroNyan:1066255956155048027>
+<t:1789927200:F> - <t:1789927200:R> - Hollow Knight: Silksong w/ Vedal & Evil <:evilOH:1168965963144765462> 🪲
+<t:1790013600:F> - <t:1790013600:R> - Dev Stream <:Tutel:1136480360495063121>
 
-Please note the different start times for the watchalong and charity D&D stream.
-
--# Fanart of the week by <@282314271210209280>; [#art post](<https://discord.com/channels/574720535888396288/1545158335144136794>)
+-# Fanart of the week by @namichyun; [#art post](<https://discord.com/channels/574720535888396288/1548118028091134073>)
 
 <@&1179189501650817174> <:neuroPing:1139543681263743076>
