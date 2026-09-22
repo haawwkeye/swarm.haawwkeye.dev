@@ -8,14 +8,31 @@ import fs from "node:fs/promises"
 const Schedule = (await fs.readFile("./schedule.txt")).toString()
 
 class ScheduleEvent {
-	constructor(title, time) {
+	constructor(title, time, fullTitle) {
 		this.title = title
+		this.fullTitle = fullTitle
 		this.time = Number(time)
 	}
 
 	getEvent() {
-		const title = this.title;
-		const lowerTitle = title.toLowerCase()
+		let title = this.title;
+		let lowerTitle = title.toLowerCase();
+
+		let isSecret = false;
+
+		if (lowerTitle.includes("secretneuroaccount")) {
+			isSecret = true;
+			let section = this.fullTitle.split(")");
+			section = section[section.length - 1];
+			// TODO: Figure out a better way to get the title, I assume this is fine for now but if the format changes I'll have to change this as well
+			if (section !== undefined)
+			{
+				title = section.trim();
+				lowerTitle = title.toLowerCase();
+			}
+		}
+
+		//console.log(`Title: ${title}\r\nFull: ${this.fullTitle}`)
 
 		const ms = this.time * 1000;
 
@@ -51,15 +68,13 @@ class ScheduleEvent {
 		endTime.setHours(endTime.getHours() + hours);
 		endTime.setMinutes(endTime.getMinutes() + mins);
 
-		
-
 		return {
 			id: ms,
 			stamp: startTime.toUTCString(),
 			start: startTime.toUTCString(),
 			end: endTime.toUTCString(),
 			summary: title,
-			url: 'https://twitch.tv/vedal987',
+			url: isSecret ? 'https://twitch.tv/secretneuroaccount' : 'https://twitch.tv/vedal987',
 		}
 	}
 }
@@ -95,7 +110,7 @@ function readScheduleLine(line) {
 	if (info[1].startsWith("Offline")) return false
 	const title = (info[2].split("<")[0]).trim();
 	const time = tryGetTime(info);
-	return new ScheduleEvent(title, time)
+	return new ScheduleEvent(title, time, info[2].trim())
 }
 
 export async function readSchedule()
