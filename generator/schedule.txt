@@ -1,11 +1,11 @@
-<t:1790704800:F> - <t:1790704800:R> - Neuro Stream <:NeurOhISee:1136209034966483084>
-<t:1790791200:F> - <t:1790791200:R> - Twin Karaoke <:SMOCUS:1255703087730135122>
-<t:1790877600:F> - <t:1790877600:R> - Evil Stream <:evilOH:1168965963144765462>
-<t:1790964000:D> - Offline <:neuroSleep:1065450325881929770>
-<t:1791050400:F> - <t:1791050400:R> - Neuro Plays Skyrim <:neuroHappi:1087537801391771678>
-<t:1791136800:D> - Time TBD - The Long Drive Marathon (If we get it working by then) 🚗 ❓
-<t:1791223200:D> - Time TBD - The Long Drive Marathon (If we get it working by then) 🚗 ❓
+<t:1791309600:F> - <t:1791309600:R> - Neuro Stream <:NeurOhISee:1136209034966483084>
+<t:1791387000:F> - <t:1791387000:R> - (on [secretneuroaccount](<https://www.twitch.tv/secretneuroaccount>); Twitch only) Neuro's *Vivy: Fluorite Eye's Song* Ep. 10-13
+<t:1791482400:F> - <t:1791482400:R> - Evil Stream <a:evilMyQueen:1546199452883357706>
+<t:1791568800:D> - Offline <:neuroSleep:1065450325881929770>
+<t:1791655200:F> - <t:1791655200:R> - Neuro Plays Skyrim 
+<t:1791741600:D> - Offline <:neuroSleep:1065450325881929770>
+<t:1791820800:F> - <t:1791820800:R> - The Long Drive Marathon 🚗
 
--# Fanart of the week by @narwhals1521; [#art post](<https://discord.com/channels/574720535888396288/1554092491706470420>)
+-# Fanart of the week by [@SlvrMars](<https://x.com/SlvrMars/status/2106597598476009865>); [#art post](<https://discord.com/channels/574720535888396288/1556149343709429770>)
 
 <@&1179189501650817174> <:neuroPing:1139543681263743076>
