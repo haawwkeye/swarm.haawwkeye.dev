@@ -97,11 +97,11 @@ if (data.lastDay != undefined)
 		const start_sunday = start_monday + (FULL_DAY * 5)
 
 		const end_monday = endDate / 1000
-		const end_tuesday = start_monday + FULL_DAY
-		const end_wednesday = start_monday + (FULL_DAY * 2)
-		const end_thursday = start_monday + (FULL_DAY * 3)
-		const end_saturday = start_monday + (FULL_DAY * 4)
-		const end_sunday = start_monday + (FULL_DAY * 5)
+		const end_tuesday = end_monday + FULL_DAY
+		const end_wednesday = end_monday + (FULL_DAY * 2)
+		const end_thursday = end_monday + (FULL_DAY * 3)
+		const end_saturday = end_monday + (FULL_DAY * 4)
+		const end_sunday = end_monday + (FULL_DAY * 5)
 
 		CreateRepeating(SpecialEvent.Title, start_monday, end_monday);
 		CreateRepeating(SpecialEvent.Title, start_tuesday, end_tuesday);
