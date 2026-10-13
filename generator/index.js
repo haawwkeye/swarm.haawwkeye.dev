@@ -5,7 +5,18 @@ import { readSchedule } from "./utils.js";
 const calendar = ical({ name: 'Neuro Schedule' });
 calendar.method(ICalCalendarMethod.REQUEST);
 
+class Event {
+	constructor(title, startTime, endTime) {
+		this.Title = title;
+		this.StartTime = startTime;
+		this.EndTime = endTime;
+	}
+}
+
 const FULL_DAY = 86400;
+
+// Early Start? About 30 min before actual time?
+const SpecialEvent = new Event("The Long Drive Marathon 🚗", "11:30:00.000", "21:00:00.000")
 
 const data = await readSchedule()
 
@@ -22,17 +33,24 @@ function AddAlarm(armEvent) {
 	})
 }
 
-function CreateRepeating(title, time)
+function CreateRepeating(title, _startTime, _endTime)
 {
-	const ms = time * 1000;
-	const startTime = new Date(ms);
-	const endTime = new Date(ms);
+	if (_endTime == null) _endTime = _startTime; // null check or whatever...
 
-	endTime.setHours(endTime.getHours() + 2);
-	endTime.setMinutes(endTime.getMinutes() + 30);
+	const startMS = _startTime * 1000;
+	const endMS = _endTime * 1000;
+
+	const startTime = new Date(startMS);
+	const endTime = new Date(endMS);
+
+	if (_endTime == null)
+	{
+		endTime.setHours(endTime.getHours() + 2);
+		endTime.setMinutes(endTime.getMinutes() + 30);
+	}
 
 	const armEvent = calendar.createEvent({
-		id: ms,
+		id: startMS,
 		stamp: startTime.toUTCString(),
 		start: startTime.toUTCString(),
 		end: endTime.toUTCString(),
@@ -50,16 +68,45 @@ data.events.forEach(event => {
 	AddAlarm(armEvent)
 })
 
+// TODO: Switch how I handle time
+// I will keep this for now until I know more info on if streams like this will happen or not
 // Repeating streams!!!! aka streams that should always be there unless the schedule says otherwise
 if (data.lastDay != undefined)
 {
 	const isoString = new Date(data.lastDay * 1000).toISOString();
-	const monday = Date.parse(`${isoString.split("T")[0]}T18:00:00.000Z`) / 1000
-	const tuesday = monday + FULL_DAY
-	const thursday = monday + (FULL_DAY * 3)
 
-	CreateRepeating("Neuro Stream", tuesday)
-	CreateRepeating("Evil Stream", thursday)
+	if (SpecialEvent) {
+		const start_monday = Date.parse(`${isoString.split("T")[0]}T${SpecialEvent.StartTime}Z`) / 1000
+		const start_tuesday = start_monday + FULL_DAY
+		const start_wednesday = start_monday + (FULL_DAY * 2)
+		const start_thursday = start_monday + (FULL_DAY * 3)
+		const start_saturday = start_monday + (FULL_DAY * 4)
+		const start_sunday = start_monday + (FULL_DAY * 5)
+
+		const end_monday = Date.parse(`${isoString.split("T")[0]}T${SpecialEvent.EndTime}Z`) / 1000
+		const end_tuesday = start_monday + FULL_DAY
+		const end_wednesday = start_monday + (FULL_DAY * 2)
+		const end_thursday = start_monday + (FULL_DAY * 3)
+		const end_saturday = start_monday + (FULL_DAY * 4)
+		const end_sunday = start_monday + (FULL_DAY * 5)
+
+		CreateRepeating(SpecialEvent.Title, start_monday, end_monday);
+		CreateRepeating(SpecialEvent.Title, start_tuesday, end_tuesday);
+		CreateRepeating(SpecialEvent.Title, start_wednesday, end_wednesday);
+		CreateRepeating(SpecialEvent.Title, start_thursday, end_thursday);
+		CreateRepeating(SpecialEvent.Title, start_saturday, end_saturday);
+		CreateRepeating(SpecialEvent.Title, start_sunday, end_sunday);
+	} else {
+		const monday = Date.parse(`${isoString.split("T")[0]}T18:00:00.000Z`) / 1000
+		const tuesday = monday + FULL_DAY
+		//const wednesday = monday + (FULL_DAY * 2)
+		const thursday = monday + (FULL_DAY * 3)
+		//const saturday = monday + (FULL_DAY * 4)
+		//const sunday = monday + (FULL_DAY * 5)
+
+		CreateRepeating("Neuro Stream", tuesday)
+		CreateRepeating("Evil Stream", thursday)
+	}
 }
 
 
