@@ -17,9 +17,9 @@ const FULL_DAY = 86400;
 
 // Early Start? About 30 min before actual time?
 const SpecialEvent = new Event("The Long Drive Marathon 🚗", (date) => {
-	date.setHours(11, 30);
+	date.setHours(11, 30, 0, 0);
 }, (date) => {
-	date.setHours(21);
+	date.setHours(21, 0, 0, 0);
 })//, "11:30:00.000", "21:00:00.000")
 
 const data = await readSchedule()
