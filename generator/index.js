@@ -16,7 +16,11 @@ class Event {
 const FULL_DAY = 86400;
 
 // Early Start? About 30 min before actual time?
-const SpecialEvent = new Event("The Long Drive Marathon 🚗", "11:30:00.000", "21:00:00.000")
+const SpecialEvent = new Event("The Long Drive Marathon 🚗", (date) => {
+	date.setHours(11, 30);
+}, (date) => {
+	date.setHours(21);
+})//, "11:30:00.000", "21:00:00.000")
 
 const data = await readSchedule()
 
@@ -35,6 +39,7 @@ function AddAlarm(armEvent) {
 
 function CreateRepeating(title, _startTime, _endTime)
 {
+	const hasEndTime = _endTime != null;
 	if (_endTime == null) _endTime = _startTime; // null check or whatever...
 
 	const startMS = _startTime * 1000;
@@ -43,7 +48,7 @@ function CreateRepeating(title, _startTime, _endTime)
 	const startTime = new Date(startMS);
 	const endTime = new Date(endMS);
 
-	if (_endTime == null)
+	if (!hasEndTime)
 	{
 		endTime.setHours(endTime.getHours() + 2);
 		endTime.setMinutes(endTime.getMinutes() + 30);
@@ -73,17 +78,25 @@ data.events.forEach(event => {
 // Repeating streams!!!! aka streams that should always be there unless the schedule says otherwise
 if (data.lastDay != undefined)
 {
-	const isoString = new Date(data.lastDay * 1000).toISOString();
+	const nextDay = () => new Date(data.lastDay * 1000);
+
+	//const isoString = nextDay.toISOString();
 
 	if (SpecialEvent) {
-		const start_monday = Date.parse(`${isoString.split("T")[0]}T${SpecialEvent.StartTime}Z`) / 1000
+		const startDate = nextDay()
+		const endDate = nextDay()
+
+		SpecialEvent.StartTime(startDate);
+		SpecialEvent.EndTime(endDate);
+
+		const start_monday = startDate / 1000
 		const start_tuesday = start_monday + FULL_DAY
 		const start_wednesday = start_monday + (FULL_DAY * 2)
 		const start_thursday = start_monday + (FULL_DAY * 3)
 		const start_saturday = start_monday + (FULL_DAY * 4)
 		const start_sunday = start_monday + (FULL_DAY * 5)
 
-		const end_monday = Date.parse(`${isoString.split("T")[0]}T${SpecialEvent.EndTime}Z`) / 1000
+		const end_monday = endDate / 1000
 		const end_tuesday = start_monday + FULL_DAY
 		const end_wednesday = start_monday + (FULL_DAY * 2)
 		const end_thursday = start_monday + (FULL_DAY * 3)
@@ -97,7 +110,10 @@ if (data.lastDay != undefined)
 		CreateRepeating(SpecialEvent.Title, start_saturday, end_saturday);
 		CreateRepeating(SpecialEvent.Title, start_sunday, end_sunday);
 	} else {
-		const monday = Date.parse(`${isoString.split("T")[0]}T18:00:00.000Z`) / 1000
+		const startDate = nextDay()
+		startDate.setHours(14,0,0,0);
+
+		const monday = startDate / 1000;
 		const tuesday = monday + FULL_DAY
 		//const wednesday = monday + (FULL_DAY * 2)
 		const thursday = monday + (FULL_DAY * 3)
