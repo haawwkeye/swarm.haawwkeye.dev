@@ -17,11 +17,12 @@ const FULL_DAY = 86400;
 
 // Early Start?
 // (based only on first day, Might change to 12 and just wake up early if it doesn't continue)
-const SpecialEvent = new Event("The Long Drive Marathon 🚗", (date) => {
-	date.setHours(11, 0, 0, 0);
-}, (date) => {
-	date.setHours(21, 0, 0, 0);
-})//, "11:30:00.000", "21:00:00.000")
+const SpecialEvent = undefined;
+//new Event("The Long Drive Marathon 🚗", (date) => {
+//	date.setHours(11, 0, 0, 0);
+//}, (date) => {
+//	date.setHours(21, 0, 0, 0);
+//})//, "11:30:00.000", "21:00:00.000")
 
 const data = await readSchedule()
 

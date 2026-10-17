@@ -113,6 +113,13 @@ function readScheduleLine(line) {
 	return new ScheduleEvent(title, time, info[2].trim())
 }
 
+function getUpcomingMonday() {
+	const resultDate = new Date();
+	resultDate.setDate(resultDate.getDate() + (1 + 7 - resultDate.getDay()) % 7);
+	console.log(resultDate)
+	return resultDate;
+}
+
 export async function readSchedule()
 {
 	const schedule = [];
@@ -121,12 +128,16 @@ export async function readSchedule()
 	})
 	
 	const events = [];
-	let lastDay = tryGetDay(schedule.at(-1).split(" - "));
-	for (let i = 0; i < schedule.length; i++) {
-		const info = schedule[i];
-		let event = readScheduleLine(info);
-		if (event) events.push(event)
-	}
+	let lastDay;
+	if (schedule.length > 0)
+	{
+		lastDay = tryGetDay(schedule.at(-1).split(" - "));
+		for (let i = 0; i < schedule.length; i++) {
+			const info = schedule[i];
+			let event = readScheduleLine(info);
+			if (event) events.push(event)
+		}
+	} else lastDay = getUpcomingMonday() / 1000 // Schedule is null, Get next monday from current date
 
 	return { events: events, lastDay: lastDay }
 }
