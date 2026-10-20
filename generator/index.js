@@ -39,7 +39,7 @@ function AddAlarm(armEvent) {
 	})
 }
 
-function CreateRepeating(title, _startTime, _endTime)
+function CreateRepeating(title, _startTime, _endTime, description)
 {
 	const hasEndTime = _endTime != null;
 	if (_endTime == null) _endTime = _startTime; // null check or whatever...
@@ -62,6 +62,7 @@ function CreateRepeating(title, _startTime, _endTime)
 		start: startTime.toUTCString(),
 		end: endTime.toUTCString(),
 		summary: title,
+		description: description ?? null,
 		url: 'https://twitch.tv/vedal987',
 		repeating: {
 			freq: 'WEEKLY'

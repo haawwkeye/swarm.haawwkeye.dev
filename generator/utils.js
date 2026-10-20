@@ -8,10 +8,11 @@ import fs from "node:fs/promises"
 const Schedule = (await fs.readFile("./schedule.txt")).toString()
 
 class ScheduleEvent {
-	constructor(title, time, fullTitle) {
+	constructor(title, time, fullTitle, description) {
 		this.title = title
 		this.fullTitle = fullTitle
 		this.time = Number(time)
+		this.description = description ?? ""
 	}
 
 	getEvent() {
@@ -74,6 +75,7 @@ class ScheduleEvent {
 			start: startTime.toUTCString(),
 			end: endTime.toUTCString(),
 			summary: title,
+			description: this.description,
 			url: isSecret ? 'https://twitch.tv/secretneuroaccount' : 'https://twitch.tv/vedal987',
 		}
 	}
@@ -109,8 +111,9 @@ function readScheduleLine(line) {
 	const info = line.split(" - ");
 	if (info[1].startsWith("Offline")) return false
 	const title = (info[2].split("<")[0]).trim();
+	const desc = info.length > 3 ? info[3].trim() : null;
 	const time = tryGetTime(info);
-	return new ScheduleEvent(title, time, info[2].trim())
+	return new ScheduleEvent(title, time, info[2].trim(), desc)
 }
 
 function getUpcomingMonday() {
@@ -132,6 +135,7 @@ export async function readSchedule()
 	if (schedule.length > 0)
 	{
 		lastDay = tryGetDay(schedule.at(-1).split(" - "));
+		//console.log(schedule)
 		for (let i = 0; i < schedule.length; i++) {
 			const info = schedule[i];
 			let event = readScheduleLine(info);
