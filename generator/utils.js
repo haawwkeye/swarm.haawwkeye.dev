@@ -110,7 +110,7 @@ function tryGetTime(info) {
 function readScheduleLine(line) {
 	const info = line.split(" - ");
 	if (info[1].startsWith("Offline")) return false
-	const title = (info[2].split("<")[0]).trim();
+	const title = (info[2].split("<:")[0]).trim();
 	const desc = info.length > 3 ? info[3].trim() : null;
 	const time = tryGetTime(info);
 	return new ScheduleEvent(title, time, info[2].trim(), desc)
