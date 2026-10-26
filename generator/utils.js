@@ -74,7 +74,7 @@ class ScheduleEvent {
 			stamp: startTime.toUTCString(),
 			start: startTime.toUTCString(),
 			end: endTime.toUTCString(),
-			summary: title,
+			summary: title.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1'),
 			description: this.description,
 			url: isSecret ? 'https://twitch.tv/secretneuroaccount' : 'https://twitch.tv/vedal987',
 		}
