@@ -28,6 +28,7 @@ const SpecialEvent = new Event("Baldur's Gate 3 Marathon", (date) =>
 }, (date) => {
 	date.setHours(21, 0, 0, 0);
 });
+const ignoreDupes = false;
 //new Event("The Long Drive Marathon 🚗", (date) => {
 //	date.setHours(11, 0, 0, 0);
 //}, (date) => {
@@ -84,7 +85,7 @@ function CreateRepeating(title, _startTime, _endTime, description)
 data.events.forEach(event => {
 	// Remove the event (This might change later once schedules actually get posted)
 	// Just removes dupes
-	if (SpecialEvent && event.fullTitle.includes(SpecialEvent.Title)) return;
+	if (ignoreDupes && (SpecialEvent && event.fullTitle.includes(SpecialEvent.Title))) return;
 	const armEvent = calendar.createEvent(event.getEvent())
 	AddAlarm(armEvent)
 })
