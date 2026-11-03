@@ -15,9 +15,19 @@ class Event {
 
 const FULL_DAY = 86400;
 
+//const Ywuria_Karaoke = new Event("Ywuria Karaoke", (date) => {
+//1794666600 // 9:30 AM
+//(I'm too lazy to add this right now, Plus my system doesn't support this yet)
+//})
+
 // Early Start?
 // (based only on first day, Might change to 12 and just wake up early if it doesn't continue)
-const SpecialEvent = undefined;
+const SpecialEvent = new Event("Baldur's Gate 3 Marathon", (date) => 
+{
+	date.setHours(11, 0, 0, 0);
+}, (date) => {
+	date.setHours(21, 0, 0, 0);
+});
 //new Event("The Long Drive Marathon 🚗", (date) => {
 //	date.setHours(11, 0, 0, 0);
 //}, (date) => {
