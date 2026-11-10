@@ -17,12 +17,16 @@ class ScheduleEvent {
 
 	getEvent() {
 		let title = this.title;
+		let description = this.description;
 		let lowerTitle = title.toLowerCase();
-
-		let isSecret = false;
+		let lowerDesc = description.toLowerCase();
+		
+		let override = "vedal987";
+		//let isSecret = false;
 
 		if (lowerTitle.includes("secretneuroaccount")) {
-			isSecret = true;
+			//isSecret = true;
+			override = "secretneuroaccount";
 			let section = this.fullTitle.split(")");
 			section = section[section.length - 1];
 			// TODO: Figure out a better way to get the title, I assume this is fine for now but if the format changes I'll have to change this as well
@@ -31,6 +35,11 @@ class ScheduleEvent {
 				title = section.trim();
 				lowerTitle = title.toLowerCase();
 			}
+		} else if (lowerDesc.startsWith("@on")) {
+			let section = description.split("@on")[1].split("(")[1].split(")");
+			override = section[0]
+			section.shift()
+			description = (section !== undefined ? section.join(")") : "").trim();
 		}
 
 		//console.log(`Title: ${title}\r\nFull: ${this.fullTitle}`)
@@ -75,8 +84,9 @@ class ScheduleEvent {
 			start: startTime.toUTCString(),
 			end: endTime.toUTCString(),
 			summary: title.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1'),
-			description: this.description,
-			url: isSecret ? 'https://twitch.tv/secretneuroaccount' : 'https://twitch.tv/vedal987',
+			description: description,
+			url: `https://twitch.tv/${override}`
+			//isSecret ? 'https://twitch.tv/secretneuroaccount' : 'https://twitch.tv/vedal987',
 		}
 	}
 }

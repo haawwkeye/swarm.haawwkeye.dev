@@ -22,12 +22,13 @@ const FULL_DAY = 86400;
 
 // Early Start?
 // (based only on first day, Might change to 12 and just wake up early if it doesn't continue)
-const SpecialEvent = new Event("Baldur's Gate 3 Marathon", (date) => 
-{
-	date.setHours(11, 0, 0, 0);
-}, (date) => {
-	date.setHours(21, 0, 0, 0);
-});
+const SpecialEvent = undefined;
+//new Event("Baldur's Gate 3 Marathon", (date) => 
+//{
+//	date.setHours(11, 0, 0, 0);
+//}, (date) => {
+//	date.setHours(21, 0, 0, 0);
+//});
 const ignoreDupes = false;
 //new Event("The Long Drive Marathon 🚗", (date) => {
 //	date.setHours(11, 0, 0, 0);
