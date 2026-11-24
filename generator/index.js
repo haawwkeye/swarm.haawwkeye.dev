@@ -6,10 +6,11 @@ const calendar = ical({ name: 'Neuro Schedule' });
 calendar.method(ICalCalendarMethod.REQUEST);
 
 class Event {
-	constructor(title, startTime, endTime) {
+	constructor(title, startTime, endTime, description) {
 		this.Title = title;
 		this.StartTime = startTime;
 		this.EndTime = endTime;
+		this.Description = description;
 	}
 }
 
@@ -121,12 +122,12 @@ if (data.lastDay != undefined)
 		const end_saturday = end_monday + (FULL_DAY * 4)
 		const end_sunday = end_monday + (FULL_DAY * 5)
 
-		CreateRepeating(SpecialEvent.Title, start_monday, end_monday);
-		CreateRepeating(SpecialEvent.Title, start_tuesday, end_tuesday);
-		CreateRepeating(SpecialEvent.Title, start_wednesday, end_wednesday);
-		CreateRepeating(SpecialEvent.Title, start_thursday, end_thursday);
-		CreateRepeating(SpecialEvent.Title, start_saturday, end_saturday);
-		CreateRepeating(SpecialEvent.Title, start_sunday, end_sunday);
+		CreateRepeating(SpecialEvent.Title, start_monday, end_monday, SpecialEvent.Description);
+		CreateRepeating(SpecialEvent.Title, start_tuesday, end_tuesday, SpecialEvent.Description);
+		CreateRepeating(SpecialEvent.Title, start_wednesday, end_wednesday, SpecialEvent.Description);
+		CreateRepeating(SpecialEvent.Title, start_thursday, end_thursday, SpecialEvent.Description);
+		CreateRepeating(SpecialEvent.Title, start_saturday, end_saturday, SpecialEvent.Description);
+		CreateRepeating(SpecialEvent.Title, start_sunday, end_sunday, SpecialEvent.Description);
 	} else {
 		const startDate = nextDay()
 		startDate.setHours(14,0,0,0);
@@ -138,8 +139,10 @@ if (data.lastDay != undefined)
 		//const saturday = monday + (FULL_DAY * 4)
 		//const sunday = monday + (FULL_DAY * 5)
 
-		CreateRepeating("Neuro Stream", tuesday)
-		CreateRepeating("Evil Stream", thursday)
+		const description = "MINIGAMES ~ ???";
+
+		CreateRepeating("Neuro Stream", tuesday, undefined, description)
+		CreateRepeating("Evil Stream", thursday, undefined, description)
 	}
 }
 
